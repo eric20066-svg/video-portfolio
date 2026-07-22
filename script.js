@@ -199,19 +199,18 @@ document.addEventListener("DOMContentLoaded", () => {
             card.className = "video-card";
             card.style.animationDelay = `${index * 0.05}s`;
 
-            // Codificar URI do arquivo local para evitar falhas com espaços ou acentos
-            const videoSrc = `Videos/${encodeURI(video.filename)}`;
+            let mediaHTML = "";
+            if (video.youtubeId) {
+                const thumbUrl = `https://img.youtube.com/vi/${video.youtubeId}/hqdefault.jpg`;
+                mediaHTML = `<img class="card-video-preview" src="${thumbUrl}" alt="${video.title}" loading="lazy" style="object-fit: cover; width: 100%; height: 100%;" />`;
+            } else {
+                const videoSrc = `Videos/${encodeURI(video.filename)}`;
+                mediaHTML = `<video class="card-video-preview" src="${videoSrc}" muted loop playsinline preload="metadata"></video>`;
+            }
 
             card.innerHTML = `
                 <div class="card-media">
-                    <video 
-                        class="card-video-preview" 
-                        src="${videoSrc}" 
-                        muted 
-                        loop 
-                        playsinline 
-                        preload="metadata"
-                    ></video>
+                    ${mediaHTML}
                     <div class="card-media-overlay">
                         <div class="play-badge">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -225,29 +224,23 @@ document.addEventListener("DOMContentLoaded", () => {
                     <h3 class="card-title">${video.title}</h3>
                     <div class="card-meta">
                         <span>${video.categoryName}</span>
-                        <span>Assista em 4K</span>
+                        <span>${video.youtubeId ? 'YouTube HD' : 'Assista em 4K'}</span>
                     </div>
                 </div>
             `;
 
-            const previewVideo = card.querySelector(".card-video-preview");
+            const previewVideo = card.querySelector("video.card-video-preview");
 
-            // Evento de hover silencioso
-            card.addEventListener("mouseenter", () => {
-                if (previewVideo) {
-                    previewVideo.play().catch(err => {
-                        // Trata políticas de autoplay do navegador se necessário
-                        console.debug("Autoplay preview restrito pelo navegador:", err);
-                    });
-                }
-            });
-
-            card.addEventListener("mouseleave", () => {
-                if (previewVideo) {
+            // Evento de hover para vídeo local (se houver)
+            if (previewVideo) {
+                card.addEventListener("mouseenter", () => {
+                    previewVideo.play().catch(err => console.debug("Autoplay preview restrito:", err));
+                });
+                card.addEventListener("mouseleave", () => {
                     previewVideo.pause();
                     previewVideo.currentTime = 0;
-                }
-            });
+                });
+            }
 
             // Evento de clique para abrir o Lightbox Modal
             card.addEventListener("click", () => {
@@ -259,28 +252,45 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /**
-     * Abrir o Modal de Vídeo
+     * Abrir o Modal de Vídeo (Suporta YouTube e MP4 Local)
      */
     function openModal(video) {
-        const videoSrc = `Videos/${encodeURI(video.filename)}`;
+        const playerWrapper = document.querySelector(".modal-player-wrapper");
+        playerWrapper.innerHTML = ""; // Limpa player anterior
+
+        if (video.youtubeId) {
+            const iframe = document.createElement("iframe");
+            iframe.className = "modal-iframe";
+            iframe.src = `https://www.youtube.com/embed/${video.youtubeId}?autoplay=1&rel=0`;
+            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+            iframe.allowFullscreen = true;
+            playerWrapper.appendChild(iframe);
+            modalFilename.textContent = `Origem: YouTube (${video.youtubeId})`;
+        } else {
+            const videoElem = document.createElement("video");
+            videoElem.className = "modal-video";
+            videoElem.id = "modal-video-player";
+            videoElem.controls = true;
+            videoElem.playsInline = true;
+            videoElem.src = `Videos/${encodeURI(video.filename)}`;
+            playerWrapper.appendChild(videoElem);
+            videoElem.play().catch(err => console.debug("Erro ao reproduzir no modal:", err));
+            modalFilename.textContent = `Arquivo: Videos/${video.filename}`;
+        }
         
-        modalVideoPlayer.src = videoSrc;
         modalTitle.textContent = video.title;
         modalCategory.textContent = video.categoryName;
-        modalFilename.textContent = `Arquivo: Videos/${video.filename}`;
 
         videoModal.classList.remove("hidden");
         document.body.style.overflow = "hidden"; // Bloqueia scroll de fundo
-
-        modalVideoPlayer.play().catch(err => console.debug("Erro ao reproduzir no modal:", err));
     }
 
     /**
      * Fechar o Modal de Vídeo
      */
     function closeModal() {
-        modalVideoPlayer.pause();
-        modalVideoPlayer.src = "";
+        const playerWrapper = document.querySelector(".modal-player-wrapper");
+        playerWrapper.innerHTML = ""; // Interrompe áudio/vídeo imediatamente
         videoModal.classList.add("hidden");
         document.body.style.overflow = ""; // Restaura scroll de fundo
     }
