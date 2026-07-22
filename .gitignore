@@ -1,0 +1,6 @@
+# Local large media files (>100MB GitHub limit)
+Videos/*.mp4
+*.mp4
+*.zip
+node_modules/
+.DS_Store
