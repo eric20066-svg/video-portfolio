@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmmaker & Video Editor | Portfólio de Vídeos</title>
+    <meta name="description" content="Portfólio profissional de audiovisual, montagem e edição de vídeo. Mostra de trabalhos em festivais, shows, teasers e conteúdo comercial.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Estilos Principais -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar" id="top">
+        <div class="container navbar-container">
+            <a href="#top" class="brand-logo" id="brand-logo">
+                <div class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                        <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                    </svg>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">ERIC</span>
+                    <span class="brand-title">Filmmaker & Editor</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#trabalhos" class="nav-link active">Trabalhos</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-cta">
+                <a href="#contato" class="btn btn-outline">Solicitar Orçamento</a>
+            </div>
+
+            <!-- Hamburger Button for Mobile -->
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-bg-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span> Showreel & Portfólio 2026
+            </div>
+            <h1 class="hero-title">Transformando Visões em <span class="gradient-text">Narrativas Cinematográficas</span></h1>
+            <p class="hero-subtitle">Especializado em cobertura de grandes festivais, teasers dinâmicos para eventos de rock, vídeos institucionais e conteúdos comerciais de alta performance.</p>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="stat-videos">19</span>
+                    <span class="stat-label">Produções em Destaque</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">4K</span>
+                    <span class="stat-label">Qualidade Máxima</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Dedicação Autoral</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery / Main Content -->
+    <main class="main-content" id="trabalhos">
+        <div class="container">
+            
+            <div class="section-header">
+                <div class="section-title-wrap">
+                    <h2 class="section-title">Portfólio de Trabalhos</h2>
+                    <p class="section-description">Passe o mouse sobre os vídeos para uma prévia rápida ou clique para assistir em tela cheia.</p>
+                </div>
+                
+                <!-- Category Filters -->
+                <div class="filter-wrapper">
+                    <div class="filter-bar" id="filter-bar">
+                        <button class="filter-btn active" data-filter="all">Todos (19)</button>
+                        <button class="filter-btn" data-filter="festivais">Festivais & Blues</button>
+                        <button class="filter-btn" data-filter="shows">Shows & Rock</button>
+                        <button class="filter-btn" data-filter="comercial">Comercial & Teasers</button>
+                        <button class="filter-btn" data-filter="social">Social Media & Reels</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Grid -->
+            <div class="video-grid" id="video-grid">
+                <!-- Dynamically generated via script.js -->
+            </div>
+
+            <!-- Empty State (Fallback) -->
+            <div class="empty-state hidden" id="empty-state">
+                <p>Nenhum vídeo encontrado nesta categoria.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- About Section -->
+    <section class="about-section" id="sobre">
+        <div class="container about-container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="subheading">Sobre Mim</span>
+                    <h2 class="about-title">Produção Audiovisual Focada em <span class="gradient-text">Energia e Precisão</span></h2>
+                    <p class="about-text">Com anos de experiência no mercado audiovisual, atuo na concepção, captação e pós-produção de vídeos dinâmicos. Minha especialidade abrange desde a atmosfera vibrante de festivais de blues e shows de rock até comerciais diretos que geram engajamento.</p>
+                    <p class="about-text">Cada corte, ritmo e escolha de color grading são executados minuciosamente para garantir que a mensagem de cada projeto seja sentida pelo espectador de forma marcante.</p>
+
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                            </div>
+                            <div>
+                                <h4>Captação de Eventos</h4>
+                                <p>Cobertura multicâmeras e gravação em ambientes dinâmicos de luz.</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                            <div>
+                                <h4>Edição & Montagem</h4>
+                                <p>Ritmo fluido, synchronização sonora de alta precisão e efeitos visuais.</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a7 7 0 1 0 10 10"></path></svg>
+                            </div>
+                            <div>
+                                <h4>Color Grading</h4>
+                                <p>Tratamento de cor estilo cinema, valorizando a paleta estética única de cada projeto.</p>
+                            </div>
+                        </div>
+
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                            </div>
+                            <div>
+                                <h4>Formatos Flexíveis</h4>
+                                <p>Entregas prontas para TV, Cinema, YouTube e formatos verticais para Reels/TikTok.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-card-banner">
+                    <div class="experience-badge">
+                        <span class="exp-years">+10</span>
+                        <span class="exp-text">Anos Criando Conteúdo Visual</span>
+                    </div>
+                    <div class="banner-glass">
+                        <div class="gear-header">Softwares & Equipamentos</div>
+                        <ul class="gear-list">
+                            <li><span class="dot"></span> Adobe Premiere Pro & After Effects</li>
+                            <li><span class="dot"></span> DaVinci Resolve (Color Grading)</li>
+                            <li><span class="dot"></span> Câmeras Cinema 4K 10-bit</li>
+                            <li><span class="dot"></span> Estabilização Motorizada & Gimbal</li>
+                            <li><span class="dot"></span> Captação de Áudio Multicanais</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <footer class="footer-section" id="contato">
+        <div class="container footer-container">
+            <div class="contact-box">
+                <div class="contact-text">
+                    <h2>Vamos Tirar Seu Projeto do Papel?</h2>
+                    <p>Entre em contato para orçamentos, parcerias ou coberturas de eventos.</p>
+                </div>
+                <div class="contact-actions">
+                    <a href="mailto:contato@filmmaker.com.br" class="btn btn-primary btn-large">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        Enviar E-mail
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <div class="brand-text">
+                        <span class="brand-name">ERIC</span>
+                        <span class="brand-title">Filmmaker & Video Editor</span>
+                    </div>
+                    <p class="footer-bio">Produção audiovisual profissional com foco em resultados visuais e narrativa cinematográfica.</p>
+                </div>
+
+                <div class="footer-socials">
+                    <h4>Conecte-se comigo</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/ericgelmine_foto/" target="_blank" rel="noopener" class="social-link" title="Instagram @ericgelmine_foto">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                            <span>Instagram (@ericgelmine_foto)</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Eric - Filmmaker. Todos os direitos reservados.</p>
+                <a href="#top" class="back-to-top">Voltar ao topo &uarr;</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal / Lightbox -->
+    <div class="modal-overlay hidden" id="video-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-container">
+            <button class="modal-close" id="modal-close" aria-label="Fechar vídeo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            
+            <div class="modal-player-wrapper">
+                <video class="modal-video" id="modal-video-player" controls controlsList="nodownload" playsinline preload="auto"></video>
+            </div>
+
+            <div class="modal-info">
+                <div class="modal-header-info">
+                    <span class="badge" id="modal-category">Categoria</span>
+                    <h3 class="modal-title" id="modal-title">Título do Vídeo</h3>
+                </div>
+                <p class="modal-filename" id="modal-filename">Arquivo: video.mp4</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
