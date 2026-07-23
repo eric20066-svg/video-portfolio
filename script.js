@@ -3,12 +3,12 @@
  * Mapeamento e Interatividade dos Vídeos Locais
  */
 
-// Catálogo dos 19 Arquivos da pasta "Videos/"
+// Catálogo de Vídeos Integrado com YouTube
 const VIDEOS_CATALOG = [
     {
         id: "v1",
         title: "BH Soul Blues Festival - Cobertura Completa",
-        filename: "BH_SoulBluesFestival_Completo.mp4",
+        youtubeId: "ujia61tdO-I",
         category: "festivais",
         categoryName: "Festivais & Blues",
         tag: "Festival Full"
@@ -16,7 +16,7 @@ const VIDEOS_CATALOG = [
     {
         id: "v2",
         title: "Mister Rock - Chamada Julho 2023",
-        filename: "CHAMADA-MISTER-ROCK-JUL-2023.mp4",
+        youtubeId: "MxOLuonrooI",
         category: "shows",
         categoryName: "Shows & Rock",
         tag: "Chamada"
@@ -24,7 +24,7 @@ const VIDEOS_CATALOG = [
     {
         id: "v3",
         title: "ColdHot Festival - Aftermovie Oficial",
-        filename: "ColdHot_Festival.mp4",
+        youtubeId: "eMPWlILVUFA",
         category: "festivais",
         categoryName: "Festivais & Blues",
         tag: "Aftermovie"
@@ -32,7 +32,7 @@ const VIDEOS_CATALOG = [
     {
         id: "v4",
         title: "Mister Rock - Promocional 35 Segundos",
-        filename: "Cópia de CHAMADA-MISTER-ROCK-35s.mp4",
+        youtubeId: "QZVdFGC7I58",
         category: "comercial",
         categoryName: "Comercial & Teasers",
         tag: "Promo 35s"
@@ -40,7 +40,7 @@ const VIDEOS_CATALOG = [
     {
         id: "v5",
         title: "Mister Rock Halloween - Teaser Especial",
-        filename: "Cópia de MISTER-ROCK-HALLOWEEN-V1.mp4",
+        youtubeId: "xg9TATl7lFs",
         category: "shows",
         categoryName: "Shows & Rock",
         tag: "Teaser"
@@ -48,7 +48,7 @@ const VIDEOS_CATALOG = [
     {
         id: "v6",
         title: "Mister Rock - Resumo de Destaques Part 01",
-        filename: "Cópia de MISTER-ROCK-PARTE01-RESUMO-ALTA.mp4",
+        youtubeId: "Xpv9Wvs6lk8",
         category: "shows",
         categoryName: "Shows & Rock",
         tag: "Resumo HD"
@@ -56,7 +56,7 @@ const VIDEOS_CATALOG = [
     {
         id: "v7",
         title: "Mister Rock - Resumo Edição Alternativa",
-        filename: "Cópia de MISTER-ROCK-PARTE01-RESUMO-V2-BAIXA.mp4",
+        youtubeId: "oeIPSsnY8EQ",
         category: "shows",
         categoryName: "Shows & Rock",
         tag: "Recap V2"
@@ -64,7 +64,7 @@ const VIDEOS_CATALOG = [
     {
         id: "v8",
         title: "Ancient Mariners - Teaser Mister Rock",
-        filename: "Cópia de MISTERROCK-TEASER-ANCIENT-MARINERS-V1.mp4",
+        youtubeId: "DJd6fwTQGSU",
         category: "shows",
         categoryName: "Shows & Rock",
         tag: "Teaser Banda"
@@ -72,7 +72,7 @@ const VIDEOS_CATALOG = [
     {
         id: "v9",
         title: "Mister Rock Band - Teaser Promocional",
-        filename: "Cópia de MISTERROCK-TEASER-MISTER-ROCK-BAND-V1.mp4",
+        youtubeId: "ED-ARTuR9a0",
         category: "shows",
         categoryName: "Shows & Rock",
         tag: "Teaser V1"
@@ -80,7 +80,7 @@ const VIDEOS_CATALOG = [
     {
         id: "v10",
         title: "Queen Tribute - Teaser Mister Rock",
-        filename: "Cópia de MISTERROCK-TEASER-QUEEN-V2.mp4",
+        youtubeId: "6OFWMX-oEs0",
         category: "shows",
         categoryName: "Shows & Rock",
         tag: "Teaser V2"
@@ -88,7 +88,7 @@ const VIDEOS_CATALOG = [
     {
         id: "v11",
         title: "XV BH Soul Blues Festival - Edição V3",
-        filename: "Cópia de XV-BH-SOUL-BLUES-FESTIVAL-V3.mp4",
+        youtubeId: "qMevFzvFczQ",
         category: "festivais",
         categoryName: "Festivais & Blues",
         tag: "Edição XV"
@@ -96,7 +96,7 @@ const VIDEOS_CATALOG = [
     {
         id: "v12",
         title: "Euro Trip Highlights - Reel Vertical",
-        filename: "EUROPA_COMPLETO_INSTA.mp4",
+        youtubeId: "HKP-zdgYSp4",
         category: "social",
         categoryName: "Social Media & Reels",
         tag: "Instagram Reel"
@@ -104,58 +104,18 @@ const VIDEOS_CATALOG = [
     {
         id: "v13",
         title: "FICC 2019 - Comercial 30s",
-        filename: "Ficc2019_30Seg.mp4",
+        youtubeId: "jVUwLyayuEk",
         category: "comercial",
         categoryName: "Comercial & Teasers",
         tag: "Comercial 30s"
     },
     {
         id: "v14",
-        title: "FICC 2019 - Kiss Stage Spot",
-        filename: "Ficc2019_30Seg_kiss.mp4",
+        title: "FICC 2019 - Spot de Destaque",
+        youtubeId: "WOzG6IeGa-I",
         category: "comercial",
         categoryName: "Comercial & Teasers",
         tag: "Spot TV"
-    },
-    {
-        id: "v15",
-        title: "Mister Rock - Vídeo Institucional da Casa",
-        filename: "MISTER ROCK VIDEO .mp4",
-        category: "shows",
-        categoryName: "Shows & Rock",
-        tag: "Institucional"
-    },
-    {
-        id: "v16",
-        title: "Auder Gang - Montagem de Show ao Vivo",
-        filename: "Montagem_AuderGang_6-f.mp4",
-        category: "shows",
-        categoryName: "Shows & Rock",
-        tag: "Montagem Live"
-    },
-    {
-        id: "v17",
-        title: "No Man's Land - Curta Cinematográfico",
-        filename: "No mans land.mp4",
-        category: "comercial",
-        categoryName: "Comercial & Teasers",
-        tag: "Cinematográfico"
-    },
-    {
-        id: "v18",
-        title: "BH Soul Blues - Retrospectiva 4 Eventos",
-        filename: "bh_soul_blues_4evenos.mp4",
-        category: "festivais",
-        categoryName: "Festivais & Blues",
-        tag: "Retrospectiva"
-    },
-    {
-        id: "v19",
-        title: "XBK Blues Burguer - Vídeo Promocional",
-        filename: "xbk_blues_burguer.mp4",
-        category: "comercial",
-        categoryName: "Comercial & Teasers",
-        tag: "Comercial Food"
     }
 ];
 
