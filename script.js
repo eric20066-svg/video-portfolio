@@ -54,22 +54,6 @@ const VIDEOS_CATALOG = [
         tag: "Resumo HD"
     },
     {
-        id: "v7",
-        title: "Mister Rock - Resumo Edição Alternativa",
-        youtubeId: "oeIPSsnY8EQ",
-        category: "shows",
-        categoryName: "Shows & Rock",
-        tag: "Recap V2"
-    },
-    {
-        id: "v8",
-        title: "Ancient Mariners - Teaser Mister Rock",
-        youtubeId: "DJd6fwTQGSU",
-        category: "shows",
-        categoryName: "Shows & Rock",
-        tag: "Teaser Banda"
-    },
-    {
         id: "v9",
         title: "Mister Rock Band - Teaser Promocional",
         youtubeId: "ED-ARTuR9a0",
