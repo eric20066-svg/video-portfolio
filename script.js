@@ -221,11 +221,12 @@ document.addEventListener("DOMContentLoaded", () => {
         if (video.youtubeId) {
             const iframe = document.createElement("iframe");
             iframe.className = "modal-iframe";
-            iframe.src = `https://www.youtube.com/embed/${video.youtubeId}?autoplay=1&rel=0`;
-            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+            iframe.src = `https://www.youtube.com/embed/${video.youtubeId}?autoplay=1&rel=0&enablejsapi=1`;
+            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+            iframe.referrerPolicy = "strict-origin-when-cross-origin";
             iframe.allowFullscreen = true;
             playerWrapper.appendChild(iframe);
-            modalFilename.textContent = `Origem: YouTube (${video.youtubeId})`;
+            modalFilename.textContent = `Origem: YouTube HD (${video.youtubeId})`;
         } else {
             const videoElem = document.createElement("video");
             videoElem.className = "modal-video";
