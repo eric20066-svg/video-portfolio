@@ -13,7 +13,7 @@
     --accent-gold: #e5a93c;
     --accent-amber: #f59e0b;
     --accent-cyan: #38bdf8;
-    --accent-gradient: linear-gradient(135deg, #e5a93c 0%, #f59e0b 40%, #38bdf8 100%);
+    --accent-gradient: #e5a93c;
     --accent-glow: rgba(229, 169, 60, 0.25);
     
     --text-primary: #f8fafc;
@@ -83,9 +83,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .gradient-text {
-    background: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--accent-gold);
     display: inline-block;
 }
 
@@ -713,7 +711,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-box {
-    background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.1), rgba(229, 169, 60, 0.1) 50%, rgba(18, 22, 31, 0.9) 100%);
+    background: var(--bg-card);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-lg);
     padding: 3.5rem;
